@@ -1,10 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <title>My Hobby Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환영합니다 - My Hobby Page</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* 2. 전체 페이지 스타일 */
+        body {
+            /* 폰트 설정: Noto Sans KR을 기본으로, 없으면 산세리프 계열 사용 */
+            font-family: 'Noto Sans KR', sans-serif;
+            
+            /* 배경: 우주 느낌을 위한 어두운 배경 */
+            background-color: #00000a;
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 15px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 100px 60px, 300px 30px;
+            
+            margin: 0;
+            height: 100vh; /* 뷰포트 전체 높이 사용 */
+            
+            /* 내용 중앙 정렬을 위한 Flexbox 설정 */
+            display: flex;
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center;    /* 세로 중앙 정렬 */
+            text-align: center;
+        }
+
+        /* 3. 메시지 스타일 */
+        .message {
+            color: #ffffff;
+            font-size: 6em; /* 큰 폰트 크기 */
+            font-weight: 700; /* 두꺼운 폰트 */
+            text-shadow: 0 0 20px #00ffff, 0 0 10px #00ffff; /* 네온 효과 */
+            padding: 20px 40px;
+            border: 2px solid #00ffff;
+            background-color: rgba(0, 0, 0, 0.4); /* 배경 투명도 */
+            border-radius: 10px;
+            animation: pulse 2s infinite alternate; /* 깜빡이는 애니메이션 효과 */
+        }
+        
+        /* 4. 애니메이션 키프레임 (네온 효과 깜빡임) */
+        @keyframes pulse {
+            from {
+                opacity: 0.8;
+                transform: scale(1);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, Azure Static Web Apps!</h1>
-    <p>This is my personal hobby project.</p>
+    <div class="message">
+        환영합니다
+    </div>
 </body>
 </html>
