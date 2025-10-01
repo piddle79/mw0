@@ -1,2 +1,2 @@
 # mw0
-1
+azure static web
