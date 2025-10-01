@@ -1,0 +1,212 @@
+* { 
+    margin: 0; padding: 0; box-sizing: border-box; 
+}
+
+body {
+    background-color: #070707;
+}
+
+/* 로딩 화면 */
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100vh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 9999;
+
+  opacity: 1;
+  transition: opacity 1s ease;  /* 페이드아웃 */
+}
+
+#loader.fade-out {
+  opacity: 0;
+  pointer-events: none; /* 클릭 방지 제거 */
+}
+
+/* 콘텐츠: 처음엔 투명 */
+#content {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+#content.show {
+  opacity: 1;
+}
+
+/*//////////////////////////////////////사이트 본시안///////////////////////////////////////*/
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+}
+
+.hero .title-warp {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero .title-warp .title {
+    font-family: 'Urbanist', sans-serif;
+    color: #F1E6D8;
+    font-size: 3.375rem;
+    line-height: 3rem;
+    font-weight: 400;
+}
+
+.middlewood-logo {
+    margin-top: 0.625rem;
+}
+
+/*//////////////////////////////////////섹션 1///////////////////////////////////////*/
+
+
+.section1 {
+    position: relative;
+    background-image: url(/assets/images/section1-bg.jpg);
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+
+.section1 .impact-text {
+    width: 100%;
+    height: 65.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 .title {
+    font-family: 'Urbanist', sans-serif;
+    color: #F1E6D8;
+    font-size: 3.375rem;
+    line-height: 3.62r5em;
+    font-weight: 400;
+    max-width: 55rem;
+    text-align: center;
+    opacity: 0; /* 시작은 숨김 */
+    height: 11.25rem;
+}
+
+.section1 .first-visual {
+    position: relative;
+    width: 76.875rem;
+    height: 37.5rem;
+    border-radius: 2.875rem;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.section1 .first-visual video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.section1 .image-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 좌 1열, 우 1열 */
+    gap:0rem;
+    align-items: flex-start;
+    max-width: 92rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 12rem;
+}
+
+.section1 .content-left img {
+  width: 35rem;
+  height: 43.125rem;
+  display: block;
+  border-radius: 2.875rem;
+  object-fit: cover;
+}
+
+.section1 .content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.section1 .content-right .text {
+  position: relative;
+  color: #F1E6D8;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.25;
+  font-weight: 400;
+  width: 90%;
+  left: 3rem;
+}
+
+.section1 .content-right video {
+  width: 47.75rem;
+  height: 30rem;
+  border-radius: 2.875rem;
+  display: block;
+  margin-top: 15rem;
+  object-fit: cover;
+}
+
+
+/*//////////////////////////////////////섹션 2///////////////////////////////////////*/
+
+.section2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.section2 .image-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 좌 1열, 우 1열 */
+    gap:0rem;
+    align-items: flex-start;
+    max-width: 92rem;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 12rem;
+}
+
+.section2 .first-visual .text {
+    position: relative;
+    color: #F1E6D8;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.25;
+    font-weight: 400;
+    width: 90%;
+}

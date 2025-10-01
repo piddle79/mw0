@@ -1,68 +1,176 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="kr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>환영합니다 - My Hobby Page</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
-
-    <style>
-        /* 2. 전체 페이지 스타일 */
-        body {
-            /* 폰트 설정: Noto Sans KR을 기본으로, 없으면 산세리프 계열 사용 */
-            font-family: 'Noto Sans KR', sans-serif;
-            
-            /* 배경: 우주 느낌을 위한 어두운 배경 */
-            background-color: #00000a;
-            background-image: 
-                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 15px);
-            background-size: 550px 550px, 350px 350px, 250px 250px;
-            background-position: 0 0, 100px 60px, 300px 30px;
-            
-            margin: 0;
-            height: 100vh; /* 뷰포트 전체 높이 사용 */
-            
-            /* 내용 중앙 정렬을 위한 Flexbox 설정 */
-            display: flex;
-            justify-content: center; /* 가로 중앙 정렬 */
-            align-items: center;    /* 세로 중앙 정렬 */
-            text-align: center;
-        }
-
-        /* 3. 메시지 스타일 */
-        .message {
-            color: #ffffff;
-            font-size: 6em; /* 큰 폰트 크기 */
-            font-weight: 700; /* 두꺼운 폰트 */
-            text-shadow: 0 0 20px #00ffff, 0 0 10px #00ffff; /* 네온 효과 */
-            padding: 20px 40px;
-            border: 2px solid #00ffff;
-            background-color: rgba(0, 0, 0, 0.4); /* 배경 투명도 */
-            border-radius: 10px;
-            animation: pulse 2s infinite alternate; /* 깜빡이는 애니메이션 효과 */
-        }
-        
-        /* 4. 애니메이션 키프레임 (네온 효과 깜빡임) */
-        @keyframes pulse {
-            from {
-                opacity: 0.8;
-                transform: scale(1);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1.05);
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Middlewood Landing Page</title>
+  <link rel="stylesheet" href="assets/css/test_style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="message">
-        환영합니다
-    </div>
+
+  <!-- 로딩 화면 -->
+  <div id="loader">
+    <p>Loading...</p>
+  </div>
+
+  <div class="content">
+      <!-- Hero Section -->
+      <section class="hero">
+          <video src="assets/video/hero-desktop.mp4" autoplay muted loop></video>
+          <div class="title-warp">
+              <div class="title">Deep Roots, Bold Vision.</div>
+              <div class="middlewood-logo">
+                <img src="assets/images/middlewood-logo.svg" alt="logo">
+              </div>
+          </div>
+      </section>
+    
+      <!-- Section1 -->
+      <section class="section1">
+        <div class="impact-text">            
+            <p class="title">Technology transforms the world, but we believe stories connect people and brands.</p>
+        </div>
+        <div class="first-visual">
+            <video src="assets/video/section-1-video.mp4" autoplay muted loop></video>
+        </div>
+        <div class="image-grid">
+          <div class="content-left">
+            <img src="assets/images/section1-img-1.jpg" alt="">
+          </div>
+          <div class="content-right">
+            <p class="text">“We craft digital experiences that grow and connect brands, planting brand values deep within.”</p>
+            <video src="assets/video/section-1-video-2-desktop.mp4" autoplay muted loop></video>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Section2 -->
+      <section class="section2">
+        <div class="first-visual">
+          <p class="text">
+            “Where creativity meets technology, AI walks hand in hand with humans."
+          </p>
+          <video src="assets/video/section-2-video-1-desktop.mp4" autoplay muted loop></video>
+        </div>
+        <div class="image-grid">
+          <div class="content-left">
+            <img src="" alt="">
+          </div>
+          <div class="content-right">
+            <p class="text">“
+              Beyond making, stories become living experiences.”
+            </p>
+            <img src="img5.jpg" alt="">
+          </div>
+        </div>
+      </section>
+    
+      <!-- Section3 -->
+      <section class="section3">
+        <div class="main">       
+            <p class="title">Stories connect people.</p>
+            <div class="image-wide">
+              <img src="img7.jpg" alt="Person sitting on tree branch">
+            </div>
+        </div>
+        <p class="title">Technology brings them closer.</p>
+        <div class="image-grid">
+          <img src="img8.jpg" alt="Feet dangling">
+          <img src="img9.jpg" alt="Walking in forest">
+        </div>
+        <div class="image-wide">
+          <img src="img10.jpg" alt="Glowing person silhouette">
+        </div>
+      </section>
+    
+      <!-- Closing Vision -->
+      <section class="closing">
+        <p class="title">Deep Roots. Bold Vision.</p>
+        <div class="image-wide">
+          <img src="img11.jpg" alt="Hand touching grass">
+        </div>
+      </section>
+    
+      <!-- CTA Section -->
+      <section class="cta">
+        <p class="section-caption">Partner with Middlewood</p>
+        <a href="#" class="cta-btn">Contact Us</a>
+      </section>
+    
+      <!-- Final Image -->
+      <section class="final">
+        <img src="img12.jpg" alt="Two people under tree">
+      </section>
+  </div>
+
+
+    <script>
+  const MIN_DISPLAY_TIME = 2000; 
+  const startTime = new Date().getTime();
+
+  // 시작 시 body 스크롤 잠금
+  document.body.classList.add("noscroll");
+
+  window.addEventListener("load", function() {
+    const loader = document.getElementById("loader");
+    const content = document.getElementById("content");
+
+    const elapsedTime = new Date().getTime() - startTime;
+    const remainingTime = Math.max(0, MIN_DISPLAY_TIME - elapsedTime);
+
+    setTimeout(() => {
+      loader.classList.add("fade-out");
+      content.classList.add("show");
+
+      setTimeout(() => {
+        loader.style.display = "none";
+
+        // 스크롤 맨 위로 + 스크롤 잠금 해제
+        window.scrollTo(0, 0);
+        document.body.classList.remove("noscroll");
+      }, 1000);
+    }, remainingTime);
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const target = document.querySelector(".impact-text .title");
+  const fullText = target.textContent.trim();
+
+  // 옵저버: 해당 구역이 보이면 타이핑 시작
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startTyping(target, fullText);
+        observer.unobserve(target); // 첫 실행 후 더 이상 관찰 안 함
+      }
+    });
+  }, { threshold: 0.3 }); // 타이밍 조절
+
+  observer.observe(target);
+
+  function startTyping(element, text) {
+    element.textContent = "";     // 초기화
+    element.style.opacity = 1;    // 보이게
+    let i = 0;
+    const speed = 40; // 타이핑 속도 (ms)
+
+    function typing() {
+      if (i < text.length) {
+        element.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, speed);
+      }
+    }
+    typing();
+  }
+});
+</script>
+
 </body>
 </html>
